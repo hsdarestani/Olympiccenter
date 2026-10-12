@@ -320,3 +320,16 @@ h2 em{color:#80c8ff}
 .js-motion .reveal,.js-motion .reveal-left,.js-motion .reveal-right{opacity:1!important;transform:none!important;transition:none!important}
 .hero-visual>img{will-change:auto}
 }
+/* Taekwondo kick trajectory: animated arc, tracker and technical HUD */
+.kick-path{position:absolute;z-index:3;left:13%;top:17%;width:min(65%,450px);height:auto;opacity:.67;pointer-events:none;filter:drop-shadow(0 0 10px #368cf257)}
+.kick-arc{stroke-dasharray:250 160;stroke-dashoffset:0;animation:arcStrike 5.8s cubic-bezier(.38,0,.23,1) infinite}
+.kick-tracer{stroke-dasharray:3 14;stroke-dashoffset:0;animation:arcTrace 6s linear infinite}
+.kick-path circle:first-of-type{transform-origin:382px 121px;animation:targetLock 3.8s ease-in-out infinite}
+@keyframes arcStrike{0%,8%{stroke-dashoffset:440;opacity:.2}39%,75%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-140;opacity:.12}}
+@keyframes arcTrace{to{stroke-dashoffset:-168}}
+@keyframes targetLock{0%,100%{transform:scale(.83);opacity:.45}50%{transform:scale(1.17);opacity:.95}}
+.links a[aria-current="location"]{color:#95d1ff}
+.links a[aria-current="location"]:after{content:"";display:block;margin:7px auto -9px;width:60%;height:2px;background:#5baaff}
+@media(max-width:900px){.kick-path{left:22%;top:13%;width:58%;opacity:.59}}
+@media(max-width:650px){.kick-path{left:7%;top:19%;width:70%;opacity:.4}}
+@media(prefers-reduced-motion:reduce){.kick-arc,.kick-tracer,.kick-path circle:first-of-type{animation:none!important}}
