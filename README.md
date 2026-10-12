@@ -1,6 +1,6 @@
 # Olympic Center Ebnoutalib
 
-Responsive German language website for the Olympic Center Ebnoutalib in Frankfurt am Main. Static HTML, CSS and JavaScript, with no build dependencies.
+Responsive German language website for the Olympic Center Ebnoutalib in Frankfurt am Main. Static HTML, CSS and JavaScript, with no build dependencies. Optimized for mobile and desktop with motion reduction support.
 
 ## Cloudflare Pages deployment
 
@@ -15,7 +15,8 @@ Responsive German language website for the Olympic Center Ebnoutalib in Frankfur
 ## Project files
 
 * index.html: complete landing page with training, team, schedule, FAQ and trial enquiry
-* styles.css: visual design, motion and responsive styling
+* styles.css: structural layout and baseline styling
+* theme.css: blue/black/white premium sports identity, animated kick trajectory, kinetic motion and responsive overrides
 * app.js: working mobile menu, local enquiry generation and clipboard copy
 * favicon.svg: temporary typographic logo
 * _headers: security and cache configuration for Cloudflare Pages
@@ -37,3 +38,7 @@ The OC logo is a temporary typographic brandmark pending a high resolution offic
 ## Public channel
 
 https://www.instagram.com/oc.ebnoutalib/
+
+## Visual redesign
+
+Blue-black and ice-white art direction includes speed line animation, animated kick arc, hero image entrance, moving technical reticles, staggered IntersectionObserver scroll reveals, hover states, sticky reading progress bar and accessible reduced-motion fallbacks. Fonts use Bunny Fonts; note this third-party service in the privacy draft. Media is currently illustrative and should be replaced with licensed authentic club imagery before promotion.
