@@ -179,10 +179,10 @@ h2 em{color:#80c8ff}
 .form>p{color:#627890}
 .form label{color:#0a2545}
 .form label small{color:#7e92a8}
-.form input,.form select,.form textarea{background:#e8f2fb;color:#0b2442;border:1px solid #c2d4e5}
+.form input,.form select,.form textarea{background-color:#e8f2fb;color:#0b2442;border:1px solid #c2d4e5}
 .form input::placeholder{color:#71889f}
 .form input:focus,.form select:focus,.form textarea:focus{border-color:#2489e7}
-.form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m4 7 6 6 6-6' stroke='%231f6fc3' stroke-width='2' fill='none'/%3E%3C/svg%3E")}
+.form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m4 7 6 6 6-6' stroke='%231f6fc3' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px 18px;background-position:right 17px center;padding-right:55px;appearance:none;-webkit-appearance:none;cursor:pointer}
 .form-button{background:#1669cd;border-color:#1669cd}
 .form-note{color:#6b7f96}
 .form-result{background:#e8f4ff;border-color:#8dbce8;color:#13375c}
@@ -333,3 +333,14 @@ h2 em{color:#80c8ff}
 @media(max-width:900px){.kick-path{left:22%;top:13%;width:58%;opacity:.59}}
 @media(max-width:650px){.kick-path{left:7%;top:19%;width:70%;opacity:.4}}
 @media(prefers-reduced-motion:reduce){.kick-arc,.kick-tracer,.kick-path circle:first-of-type{animation:none!important}}
+
+/* Mobile form: keep select chevron single, clear and comfortably tappable. */
+.form input,.form select{min-height:56px;line-height:1.35}
+.form select{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.form select:focus-visible,.form input:focus-visible{outline:2px solid #2589e7;outline-offset:2px}
+.form select option{background-color:#f4f8ff;color:#102c4a}
+@media(max-width:650px){
+  .form select{background-size:16px 16px;background-position:right 15px center;padding:0 43px 0 14px;font-size:15px}
+  .form input{padding-inline:14px;font-size:15px}
+  .form .form-button{min-height:58px}
+}
